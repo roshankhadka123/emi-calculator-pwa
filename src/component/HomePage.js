@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppBar, Button, IconButton, TextField, Toolbar} from "@material-ui/core";
+import {AppBar, Button, Fab, IconButton, TextField, Toolbar} from "@material-ui/core";
 import logo from "./images/logo.png"
 import MoreDetailDailog from "./MoreDetailDailog";
 
@@ -204,12 +204,20 @@ class HomePage extends Component {
                     </div>
                 </section>
                 <section className={"btn-section"}>
-                    <Button className={"more-detail-btn"} variant={"contained"} disabled={this.state.disabledMoreDetails}  onClick={() => {
+
+                    <Fab
+                        variant="extended"
+                        size="medium"
+                        color="default"
+                        aria-label="add"
+                        className={"more-detail-btn"}
+                        disabled={this.state.disabledMoreDetails}
+                        onClick={() => {
                         this.calculateEMIDetails();
 
                     }}>
                         More Details
-                    </Button>
+                    </Fab>
                 </section>
                 {this.state.open ?
                     <MoreDetailDailog handleOpen={this.handleClickOpen}
