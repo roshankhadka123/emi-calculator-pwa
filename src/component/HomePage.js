@@ -44,7 +44,7 @@ class HomePage extends Component {
             loanAmount: this.state.loanAmount,
             interestPayable: interest==='NaN'?0:interest,
             totalPayment: totalPayment=='NaN'?0:totalPayment,
-            disabledMoreDetails:emi==0?true:false
+            disabledMoreDetails:emi>0?false:true
         })
     }
 
@@ -76,7 +76,6 @@ class HomePage extends Component {
                 details: details,
                 open:true
             })
-            console.log("inside details data",this.state.details)
 
         })
     }
