@@ -11,12 +11,7 @@ this.addEventListener("install",(event)=>{
              "/static/media/logo.0ed4a2ac.png",
              "/static/media/Gilroy-Regular.5b89a8df.ttf",
              "/index.html",
-             "/logo.png",
              "/"
-
-
-
-
          ])
      })
     )
