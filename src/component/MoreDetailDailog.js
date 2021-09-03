@@ -43,7 +43,7 @@ class MoreDetailDailog extends Component {
                         <Table>
                             <TableHead>
                                 <TableRow className={"table-head"}>
-                                    <TableCell>Month</TableCell>
+                                    <TableCell align={"center"}>Month</TableCell>
                                     <TableCell align="center" className={"table-head-cell"}>Intrest</TableCell>
                                     <TableCell align="center" className={"table-head-cell"}>Principal</TableCell>
                                     <TableCell align="center" className={"table-head-cell"}>Total Payable</TableCell>
