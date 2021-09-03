@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/emi-calculator-pwa/static/css/main.e0fd8ff6.chunk.css",
+    "main.js": "/emi-calculator-pwa/static/js/main.8c7d8c30.chunk.js",
+    "main.js.map": "/emi-calculator-pwa/static/js/main.8c7d8c30.chunk.js.map",
+    "runtime-main.js": "/emi-calculator-pwa/static/js/runtime-main.b8ee4931.js",
+    "runtime-main.js.map": "/emi-calculator-pwa/static/js/runtime-main.b8ee4931.js.map",
+    "static/js/2.ba721edf.chunk.js": "/emi-calculator-pwa/static/js/2.ba721edf.chunk.js",
+    "static/js/2.ba721edf.chunk.js.map": "/emi-calculator-pwa/static/js/2.ba721edf.chunk.js.map",
+    "index.html": "/emi-calculator-pwa/index.html",
+    "static/css/main.e0fd8ff6.chunk.css.map": "/emi-calculator-pwa/static/css/main.e0fd8ff6.chunk.css.map",
+    "static/js/2.ba721edf.chunk.js.LICENSE.txt": "/emi-calculator-pwa/static/js/2.ba721edf.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/emi-calculator-pwa/static/media/Gilroy-Regular.5b89a8df.ttf",
+    "static/media/logo.0ed4a2ac.png": "/emi-calculator-pwa/static/media/logo.0ed4a2ac.png",
+    "static/media/logo.6ce24c58.svg": "/emi-calculator-pwa/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8ee4931.js",
+    "static/js/2.ba721edf.chunk.js",
+    "static/css/main.e0fd8ff6.chunk.css",
+    "static/js/main.8c7d8c30.chunk.js"
+  ]
+}
