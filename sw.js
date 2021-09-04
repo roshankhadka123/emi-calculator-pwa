@@ -1,5 +1,5 @@
 console.log("service worker from sw.js")
-let cacheName="emi";
+let cacheName="emi-calculatorexp";
 
 
 var urlCache = [
@@ -14,6 +14,7 @@ var urlCache = [
     "/"
 
 ];
+
 
 /// install service worker
 this.addEventListener('install',(event)=>{
@@ -51,35 +52,38 @@ this.addEventListener('install',(event)=>{
 //     })
 // }
 
-this.addEventListener("fetch",(event)=>{
+
+
+this.addEventListener('fetch', event => {
     if(!navigator.onLine) {
         event.respondWith(
-            caches.match(event.request).then((result) => {
-                if (result) {
-                    return result
-                }
-                let requestUrl=event.request.clone();
-                fetch(requestUrl)
-            })
-        )
+            caches.match(event.request)
+                .then(function (response) {
+                        // Cache hit - return response
+                        if (response) {
+                            return response;
+                        }
+                        return fetch(event.request);
+                    }
+                )
+        );
     }
-})
-
-
+});
 
 
 
 // Update a service worker
-this.addEventListener('activate',function(event){
+this.addEventListener('activate', event => {
+    let cacheWhitelist = ['emi-calculatorexp'];
     event.waitUntil(
-        caches.keys().then(function(cacheNames){
+        caches.keys().then(cacheNames => {
             return Promise.all(
-                cacheNames.filter(function(cacheNames){
-                    //
-                }).map(function(cacheNames){
-                    return caches.delete(cacheNames);
+                cacheNames.map(cacheName => {
+                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        return caches.delete(cacheName);
+                    }
                 })
-            )
+            );
         })
-    )
-})
+    );
+});
