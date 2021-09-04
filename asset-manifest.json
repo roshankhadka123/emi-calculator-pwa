@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/emi-calculator-pwa/static/css/main.ef8cf761.chunk.css",
-    "main.js": "/emi-calculator-pwa/static/js/main.b10bb5b1.chunk.js",
-    "main.js.map": "/emi-calculator-pwa/static/js/main.b10bb5b1.chunk.js.map",
+    "main.js": "/emi-calculator-pwa/static/js/main.091023d6.chunk.js",
+    "main.js.map": "/emi-calculator-pwa/static/js/main.091023d6.chunk.js.map",
     "runtime-main.js": "/emi-calculator-pwa/static/js/runtime-main.b8ee4931.js",
     "runtime-main.js.map": "/emi-calculator-pwa/static/js/runtime-main.b8ee4931.js.map",
     "static/js/2.ba721edf.chunk.js": "/emi-calculator-pwa/static/js/2.ba721edf.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.b8ee4931.js",
     "static/js/2.ba721edf.chunk.js",
     "static/css/main.ef8cf761.chunk.css",
-    "static/js/main.b10bb5b1.chunk.js"
+    "static/js/main.091023d6.chunk.js"
   ]
 }
