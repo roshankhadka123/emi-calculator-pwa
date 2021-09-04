@@ -1,21 +1,31 @@
 console.log("service worker from sw.js")
-let cacheData="appV1";
-this.addEventListener("install",(event)=>{
+let cacheName="emi";
+
+
+var urlCache = [
+    "/static/js/bundle.js",
+    "/static/js/vendors~main.chunk.js",
+    "/static/js/main.chunk.js",
+    "/static/js/0.chunk.js",
+    "/static/media/logo.0ed4a2ac.png",
+    "/static/media/Gilroy-Regular.5b89a8df.ttf",
+    "/index.html",
+    '/manifest.json',
+    "/"
+
+];
+
+/// install service worker
+this.addEventListener('install',(event)=>{
     event.waitUntil(
-     caches.open(cacheData).then((cache)=>{
-         cache.addAll([
-             "/static/js/bundle.js",
-             "/static/js/vendors~main.chunk.js",
-             "/static/js/main.chunk.js",
-             "/static/js/0.chunk.js",
-             "/static/media/logo.0ed4a2ac.png",
-             "/static/media/Gilroy-Regular.5b89a8df.ttf",
-             "/index.html",
-             "/"
-         ])
-     })
+        caches.open(cacheName)
+            .then((cache)=>{
+                return cache.addAll(urlCache)
+            })
     )
 })
+
+
 // "/users"=if route availabel in install
 
 // if there need to fetch api from like user page u sould do that
@@ -56,18 +66,20 @@ this.addEventListener("fetch",(event)=>{
 })
 
 
+
+
+
 // Update a service worker
-this.addEventListener('activate', event => {
-    var cacheWhitelist = ['appV1'];
+this.addEventListener('activate',function(event){
     event.waitUntil(
-        caches.keys().then(cacheNames => {
+        caches.keys().then(function(cacheNames){
             return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
+                cacheNames.filter(function(cacheNames){
+                    //
+                }).map(function(cacheNames){
+                    return caches.delete(cacheNames);
                 })
-            );
+            )
         })
-    );
-});
+    )
+})
